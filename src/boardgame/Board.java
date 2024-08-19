@@ -40,4 +40,12 @@ public class Board {
         piece.position = position;
     }
 
+    private boolean positionExistis(int row, int column){
+        return row >= 0 && row < rows && column >= 0 && column < columns;
+    }
+
+    public boolean positionExists(Position position){
+        return positionExistis(position.getRow(), position.getColumn());
+    }
+
 }
